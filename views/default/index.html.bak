@@ -1,0 +1,10 @@
+{{extend 'layout.html'}}
+
+<table class="table">
+    <tr><th>Sl.</th><th>Title</th><th>Body</th><th>Posting Time</th><th>Detail</th></tr>
+    {{ sl=0 }}
+    {{ for row in rows: }}
+    {{sl=sl+1}}
+        <tr><td>{{=sl}}</td><td>{{=row.title}}</td><td>{{=row.body}}</td><td>{{=row.created_on}}</td><td><a href="{{=URL('show',args=row.id)}}">Detail</a></td></tr>
+    {{pass}}
+</table>

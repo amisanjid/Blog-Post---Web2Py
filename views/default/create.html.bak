@@ -1,0 +1,5 @@
+{{extend 'layout.html'}}
+<h1>Create Blog Post</h1>
+<a class="btn btn-success" href="{{=URL('index')}}">Show All</a>
+<br />
+{{=form}}
